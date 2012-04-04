@@ -1,0 +1,29 @@
+<h1 style="text-align:center;"> Todos</h1>
+<center>
+<form id="new_entry">
+
+  <input  id="new-todo" type="text" placeholder="What needs to be done?"><br />
+  <input  id="new-due"  type="text" placeholder="DD/MM/YY"><br />
+  <input  type="submit" value="Add">
+ 
+</form>
+
+ <button class="delete_all"> Clear</button> 
+
+
+<div id ="task-list" style="width:200px;border:1px text-align:center;">
+  <% for entry in @todos.models: %>
+     <div id="task_<%=entry.get('id')%>">
+
+      <%= entry.get('task') %> </br>
+      <%= entry.get('duedate') %>
+      <button class="delete" data-id="<%=entry.get('id')%>">Delete</button><a href ="#/entries/<%=entry.get('id')%>/edit">Edit</a> 
+<hr/>
+      </div>
+     <% end %>
+       
+      
+
+</div>
+
+</center>

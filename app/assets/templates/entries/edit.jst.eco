@@ -1,0 +1,10 @@
+<h1></h1>
+<h2>Update Entry</h2>
+
+
+<form  id="edit-entry">
+
+<input id ="edit-todo" type="text" value="<%= @model.get('task') %>">
+<input id ="edit-due"  type="text" value="<%= @model.get('duedate') %>">
+<button type="submit">Update</button>
+</form>
